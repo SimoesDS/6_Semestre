@@ -17,9 +17,6 @@ qFinaliza, #, >
 
 // --- Contar 'b'
 
-//qContaB, #
-//qContaB, #, >
-
 qContaB, a
 qContaB, a, >
 
@@ -27,7 +24,7 @@ qContaB, b
 qVaiSomar, !, >
 
 qContaB, #
-qF, #, >
+qCompara, #, >
 
 // -- Vai pro final da frase
 qVaiSomar, #
@@ -132,3 +129,152 @@ qVolta, 1, >
 
 qAjustaNum, 1
 qAjustaNum, 0, >
+
+// -- Compara os as qtds e escreve SIM
+qCompara, 1
+qVaiCompB1, _, >
+
+qCompara, 0
+qVaiCompB0, _, >
+
+qCompara, #
+qFazAlimpaS, #, >
+
+qVaiCompB1, 0
+qVaiCompB1, 0, >
+
+qVaiCompB1, 1
+qVaiCompB1, 1, >
+
+qVaiCompB1, @
+qVaiCompB1, @, >
+
+qVaiCompB1, #
+qTemSer1, #, >
+
+qTemSer1, 1
+qVoltIniB, @, <
+
+qTemSer1, 0
+qFazAlimpaN, _, >
+
+qTemSer1, @
+qTemSer1, @, >
+
+qTemSer1, _
+qFazAlimpaN, _, <
+
+qVoltIniB, #
+qVoltIniA, #, <
+
+qVoltIniA, 0
+qVoltIniA, 0, <
+
+qVoltIniA, 1
+qVoltIniA, 1, <
+
+qVoltIniA, _
+qCompara, _, >
+
+qVaiCompB0, 0
+qVaiCompB0, 0, >
+
+qVaiCompB0, 1
+qVaiCompB0, 1, >
+
+qVaiCompB0, @
+qVaiCompB0, @, >
+
+qVaiCompB0, #
+qTemSer0, #, >
+
+qTemSer0, 0
+qVoltIniB, @, <
+
+qTemSer0, 1
+qFazAlimpaN, _, >
+
+qTemSer0, @
+qTemSer0, @, >
+
+qVoltIniB, #
+qVoltIniA, #, <
+
+qVoltIniB, @
+qVoltIniB, @, <
+
+qVoltIniA, 0
+qVoltIniA, 0, <
+
+qVoltIniA, 1
+qVoltIniA, 1, <
+
+qVoltIniA, _
+qCompara, _, >
+
+// -- Finaliza com SIM
+qFazAlimpaS, _
+qFazAlimpaS, _, <
+
+qFazAlimpaS, @
+qFazAlimpaS, _, >
+
+qFazAlimpaS, #
+qVoltaIniCA, _, <
+
+qVoltaIniCA, _
+qVoltaIniCA, _, <
+
+qVoltaIniCA, #
+qEscrevS, #, >
+
+qEscrevS, _
+qEscrevI, S, >
+
+qEscrevI, _
+qEscrevM, I, >
+
+qEscrevM, _
+qEscrev#, M, >
+
+// -- Finaliza com NÃO
+qFazAlimpaN, _
+qFazAlimpaN, _, <
+
+qFazAlimpaN, 1
+qFazAlimpaN, _, >
+
+qFazAlimpaN, 0
+qFazAlimpaN, _, >
+
+qFazAlimpaN, @
+qFazAlimpaN, _, <
+
+qFazAlimpaN, #
+qVoltaIniCAN, _, <
+
+qVoltaIniCAN, _
+qVoltaIniCAN, _, <
+
+qVoltaIniCAN, 1
+qVoltaIniCAN, _, <
+
+qVoltaIniCAN, 0
+qVoltaIniCAN, _, <
+
+qVoltaIniCAN, #
+qEscrevN, #, >
+
+qEscrevN, _
+qEscrevA, N, >
+
+qEscrevA, _
+qEscrevO, Ã, >
+
+qEscrevO, _
+qEscrev#, O, >
+
+// -- Finaliza com #
+
+qEscrev#, _
+qF, #, >
