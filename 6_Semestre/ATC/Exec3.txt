@@ -1,0 +1,134 @@
+name: Contador 'a's
+init: q0
+accept: qF
+
+q0, #
+qContaA, #, >
+
+// --- Contar 'a' ---
+qContaA, a
+qVaiSomar, @, >
+
+qContaA, b
+qContaA, b, >
+
+qContaA, #
+qFinaliza, #, >
+
+// --- Contar 'b'
+
+//qContaB, #
+//qContaB, #, >
+
+qContaB, a
+qContaB, a, >
+
+qContaB, b
+qVaiSomar, !, >
+
+qContaB, #
+qF, #, >
+
+// -- Vai pro final da frase
+qVaiSomar, #
+qVerifUlt, #, >
+
+qVerifUlt, _
+qVaiHas, _, <
+
+qVerifUlt, 1
+qVaiSomar, 1, >
+
+qVerifUlt, 0
+qVaiSomar, 0, >
+
+qVaiHas, #
+qSomaUm, #, >
+
+qVaiHas, 0
+qVaiHas, 0, <
+
+qVaiHas, 1
+qVaiHas, 1, <
+
+qVaiSomar, 0
+qVaiSomar, 0, >
+
+qVaiSomar, 1
+qVaiSomar, 1, >
+
+qVaiSomar, a
+qVaiSomar, a, >
+
+qVaiSomar, b
+qVaiSomar, b, >
+
+qVaiSomar, _
+qVaiHas, _, <
+
+// -- Coloca apenas # no final
+qFinaliza, _
+qVolta, #, <
+
+qFinaliza, #
+qFinaliza, #, >
+
+qFinaliza, 0
+qFinaliza, 0, >
+
+qFinaliza, 1
+qFinaliza, 1, >
+
+// --- Volta para a posição onde parou
+qVolta, 0
+qVolta, 0, <
+
+qVolta, 1
+qVolta, 1, <
+
+qVolta, a
+qVolta, a, <
+
+qVolta, b
+qVolta, b, <
+
+qVolta, #
+qVolta, #, <
+
+qVolta, @
+qContaA, a, >
+
+qVolta, !
+qContaB, b, >
+
+qVolta, _
+q2, _, >
+
+q2, #
+qContaB, #, >
+
+
+// -- Contador
+qSomaUm, #
+qSomaUm, #, >
+
+qSomaUm, _
+qVolta, 1, <
+
+qSomaUm, 0
+qVolta, 1, <
+
+qSomaUm, 1
+qAjustaNum, 0, >
+
+qAjustaNum, _
+qVolta, 1, <
+
+qAjustaNum, #
+qVolta, 1, >
+
+qAjustaNum, 0
+qVolta, 1, >
+
+qAjustaNum, 1
+qAjustaNum, 0, >
